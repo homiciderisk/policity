@@ -1,0 +1,116 @@
+/* POLICITY project site — minimal, readable */
+:root{
+  --bg:#ffffff;
+  --text:#111111;
+  --muted:#555555;
+  --rule:#e8e8e8;
+  --link:#111111;
+  --max: 900px;
+  --radius: 14px;
+}
+
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font:16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+
+a{color:var(--link); text-decoration: underline; text-underline-offset: 3px;}
+a:hover{opacity:.75;}
+
+.wrap{max-width:var(--max); margin:48px auto; padding:0 22px;}
+header{margin-bottom:20px;}
+.kicker{font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 6px 0;}
+h1{
+  font-size:34px;
+  line-height:1.15;
+  margin:0 0 10px 0;
+  letter-spacing:-0.01em;
+}
+.subtitle{margin:0; color:var(--muted); max-width: 78ch;}
+.links{
+  margin-top:14px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 14px;
+  color:var(--muted);
+}
+.links a{color:var(--text);}
+
+.banner{
+  margin:22px 0 22px 0;
+  border-radius: var(--radius);
+  overflow:hidden;
+  border: 1px solid var(--rule);
+}
+.banner img{width:100%; height:auto; display:block;}
+.caption{
+  font-size:13px;
+  color:var(--muted);
+  padding:10px 12px;
+  border-top: 1px solid var(--rule);
+  background:#fafafa;
+}
+
+hr{
+  border:0;
+  border-top:1px solid var(--rule);
+  margin:22px 0;
+}
+
+section{margin: 18px 0 26px 0;}
+h2{
+  font-size:18px;
+  margin:0 0 10px 0;
+  letter-spacing:-0.01em;
+}
+p{margin:0 0 14px 0; max-width: 88ch;}
+
+.grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 28px;
+}
+@media (max-width:820px){
+  .grid{grid-template-columns: 1fr;}
+}
+
+.card{
+  border:1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 14px 14px;
+}
+.card h3{margin:0 0 8px 0; font-size:16px;}
+.small{font-size:13px; color:var(--muted);}
+
+ul.clean{margin:0; padding-left:18px;}
+ul.clean li{margin:6px 0;}
+
+ul.pub{list-style:none; padding:0; margin:0;}
+ul.pub li{
+  padding:12px 0;
+  border-top:1px solid var(--rule);
+}
+ul.pub li:first-child{border-top:0;}
+.meta{color:var(--muted);}
+
+.links-inline{
+  margin-left: 10px;
+  display: inline-flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.chip{
+  display: inline-block;
+  padding: 2px 8px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 13px;
+}
+.chip:hover{ opacity: .75; }
+
+.footer{margin-top:34px; padding-top:14px; border-top:1px solid var(--rule); color:var(--muted); font-size:13px;}
